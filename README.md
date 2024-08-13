@@ -1,2 +1,2 @@
-# NTT-TECH-TREK
-Tech Trek Program
+# Tech Trek
+Tech Trek Program @ NTT DATA
