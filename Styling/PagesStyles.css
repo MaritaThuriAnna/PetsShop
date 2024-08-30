@@ -1,8 +1,7 @@
 body {
     margin: 0;
-    padding: 0 15px;
+    padding: 0;
     font-family: 'Garamond', serif;
-    line-height: 1.6;
     background-color: #effff5;
 }
 
@@ -64,88 +63,59 @@ nav input[type="text"] {
     outline: none;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-h1,
-h2,
-h3 {
-    text-align: left;
-    font-family: 'Garamond', serif;
-    color: #222724;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-weight: bold;
-    font-size: 2.5em;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
 #images {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 8px;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    background-color: rgba(93, 117, 94, 0.5);
-    margin: 0 auto; 
-    max-width: fit-content; 
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .image-wrapper {
-    position: relative; 
-    display: inline-block; 
-    max-width: 200px; 
+    max-width: 225px;
+    max-height: 225px;
+    overflow: hidden;
+}
+
+.image-wrapper-arrow {
+    max-width: 50px;
+    max-height: 50px;
+    
+}
+
+.image-wrapper-arrow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .image-wrapper img {
-    display: block; 
-    width: 100%; 
-    border-radius: 8px; 
-    transition: transform 0.3s ease; 
-}
-
-.text-overlay {
-    position: absolute; 
-    top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #ffffff; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    font-size: 3.8em; 
-    text-align: center;
-}
-
-#images a {
-    text-decoration: none;
-    flex: 1 1 calc(25% - 15px);
-    max-width: 200px;
-}
-
-#images img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
 }
 
-#images img:hover {
-    transform: scale(1.05);
+.image-wrapper-arrow img:hover {
+    transform: scale(1.1);
+}
+
+main {
+    text-align: left;
+}
+
+h1{
+    font-size: 1.8em;
+    color: #222724;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #222724;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -157,6 +127,7 @@ footer {
 }
 
 footer p {
+    font-size: 1em;
     color: #222724;
     margin: 5px 0;
 }
