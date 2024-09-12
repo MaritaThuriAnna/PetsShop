@@ -17,6 +17,7 @@ body {
 header {
     width: 100%;
     position: relative;
+    /* left si transform cancels out each other vezi daca le stergi ca nu se schimba */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -31,9 +32,10 @@ header {
 }
 
 header img {
-    padding: 50px;
-    max-width: 100%;
-    height: auto;
+    max-height: 100px; 
+    height: auto; 
+    width: auto; 
+    padding: 10px;
 }
 
 header nav {
@@ -72,14 +74,14 @@ main {
 h3 {
     font-family: 'Garamond', serif;
     color: #222724;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 2em;
 }
 
 .cards {
     display: flex;
-    flex-direction: column; /* Stacks cards vertically */
-    align-items: center; /* Centers cards horizontally */
+    flex-direction: column; 
+    align-items: center; 
     gap: 20px;
     padding: 20px;
 }

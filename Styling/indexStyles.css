@@ -1,11 +1,20 @@
+/* elemnet selector:
+All HTML elements of the specified type.*/
 body {
     margin: 0;
-    padding: 0 15px;
+    padding: 0 15px; 
     font-family: 'Garamond', serif;
     line-height: 1.6;
     background-color: #effff5;
 }
 
+/* padding, the space around the content. In the example below, it is the space around the paragraph text.
+border, the solid line that is just outside the padding.
+margin, the space around the outside of the border. */
+
+/* class selector: 
+The element(s) on the page with the specified class. 
+Multiple instances of the same class can appear on a page.*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,9 +40,10 @@ header {
 }
 
 header img {
-    padding: 50px;
-    max-width: 100%;
-    height: auto;
+    max-height: 100px; 
+    height: auto; 
+    width: auto; 
+    padding: 10px;
 }
 
 header nav {
@@ -92,6 +102,9 @@ h3 {
     font-size: 1.2em;
 }
 
+/* ID selector:
+The element on the page with the specified ID. 
+On a given HTML page, each id value should be unique.*/
 #images {
     display: flex;
     justify-content: center;
@@ -144,6 +157,9 @@ h3 {
     height: auto;
 }
 
+/* pseudo class selector:
+The specified element(s), but only when in the specified state.
+when the mouse pointer is hovering over the link. */
 #images img:hover {
     transform: scale(1.05);
 }
