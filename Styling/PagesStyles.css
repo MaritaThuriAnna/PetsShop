@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
     background-color: #effff5;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,10 +16,11 @@ body {
 
 header {
     width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    /* position: relative; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     display: flex;
+    flex-wrap: wrap; /*ca sa nu iasa din chenar cam=nd ma uit pe mobil*/
     justify-content: space-between;
     align-items: baseline;
     padding: 20px 0;
@@ -28,6 +30,7 @@ header {
     color: rgb(0, 0, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 header img {
@@ -44,6 +47,7 @@ header nav {
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(96, 61, 52, 0.5);
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -71,28 +75,21 @@ nav input[type="text"] {
     align-items: center;
     gap: 20px;
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 
 .image-wrapper {
     max-width: 225px;
-    max-height: 225px;
+    flex: 1 1 calc(33.33% - 40px);
     overflow: hidden;
 }
 
 .image-wrapper-arrow {
     max-width: 50px;
     max-height: 50px;
-    
 }
 
-.image-wrapper-arrow img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.image-wrapper img {
+.image-wrapper-arrow img, .image-wrapper img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -102,7 +99,6 @@ nav input[type="text"] {
 .image-wrapper-arrow img:hover {
     transform: scale(1.1);
 }
-
 main {
     text-align: left;
 }
@@ -133,3 +129,33 @@ footer p {
     color: #222724;
     margin: 5px 0;
 }
+
+
+/* for different displays */
+@media (max-width: 768px) {
+    #images {
+        gap: 10px; 
+    }
+
+    .image-wrapper {
+        flex: 1 1 15%; 
+        max-width: 100px; 
+    }
+    .image-wrapper-arrow {
+        flex: 1 1 15%;
+        max-width: 30px; 
+    }
+
+    .image-wrapper img, .image-wrapper-arrow img {
+        width: 100%;
+        height:auto;
+    }
+
+    p{
+        font-size: 0.9em;
+    }
+   
+}
+
+
+
