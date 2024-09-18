@@ -72,3 +72,21 @@ a:hover {
     border-radius: 3px;
     font-size: 1em;
 }
+
+
+@media screen {
+    .container{
+        width: 75%;
+        height:fit-content;
+        padding: 20px;
+    }
+
+    .t{
+        margin-bottom: 5em;
+    }
+
+    .signUp input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

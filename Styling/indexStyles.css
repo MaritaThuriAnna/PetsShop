@@ -25,10 +25,11 @@ Multiple instances of the same class can appear on a page.*/
 
 header {
     width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    /* position: relative; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     display: flex;
+    flex-wrap: wrap; /*ca sa nu iasa din chenar cam=nd ma uit pe mobil*/
     justify-content: space-between;
     align-items: baseline;
     padding: 20px 0;
@@ -53,6 +54,7 @@ header nav {
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(96, 61, 52, 0.5);
+    flex-wrap: wrap; /*si aici*/
 }
 
 nav a {
@@ -115,8 +117,10 @@ On a given HTML page, each id value should be unique.*/
     flex-wrap: wrap;
     background-color: rgba(93, 117, 94, 0.5);
     margin: 0 auto; 
-    max-width: fit-content; 
+   
 }
+
+/* updateuri la imagini ca sa fie responsive pe diferite displayuri */
 
 .image-wrapper {
     position: relative; 
@@ -144,9 +148,14 @@ On a given HTML page, each id value should be unique.*/
 }
 
 #images a {
-    text-decoration: none;
     flex: 1 1 calc(25% - 15px);
     max-width: 200px;
+}
+
+@media screen {
+    #images a{
+        flex: 1 1 calc(50% - 15px);
+    }
 }
 
 #images img {
